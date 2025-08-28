@@ -60,6 +60,75 @@ import { companyName, companyPhone, companyEmail } from '@/lib/companyConfig';
 <a href={`tel:${companyPhone}`}>{companyPhone}</a>
 ```
 
+### Practical Examples
+
+**Contact Information Display:**
+```typescript
+import { companyName, companyPhone, companyEmail } from '@/lib/companyConfig';
+
+export function ContactInfo() {
+  return (
+    <div>
+      <h3>{companyName}</h3>
+      <p>Call: <a href={`tel:${companyPhone}`}>{companyPhone}</a></p>
+      <p>Email: <a href={`mailto:${companyEmail}`}>{companyEmail}</a></p>
+    </div>
+  );
+}
+```
+
+**Business Hours with Status:**
+```typescript
+import { isBusinessOpen, getBusinessHoursForDay } from '@/lib/companyConfig';
+
+export function BusinessStatus() {
+  const isOpen = isBusinessOpen();
+  const todayHours = getBusinessHoursForDay('Monday');
+  
+  return (
+    <div>
+      <span className={isOpen ? 'open' : 'closed'}>
+        {isOpen ? '🟢 Open Now' : '🔴 Closed'}
+      </span>
+      {todayHours && <p>Today: {todayHours.open} - {todayHours.close}</p>}
+    </div>
+  );
+}
+```
+
+**Social Media Links:**
+```typescript
+import { companySocialMedia } from '@/lib/companyConfig';
+
+export function SocialLinks() {
+  return (
+    <div>
+      {companySocialMedia.map(social => (
+        <a key={social.platform} href={social.url}>
+          {social.platform}
+        </a>
+      ))}
+    </div>
+  );
+}
+```
+
+**Emergency Service Banner:**
+```typescript
+import { emergencyService } from '@/lib/companyConfig';
+
+export function EmergencyBanner() {
+  if (!emergencyService.available) return null;
+  
+  return (
+    <div className="emergency-banner">
+      <span>🚨 {emergencyService.hours}</span>
+      <a href={`tel:${emergencyService.phone}`}>Call Now</a>
+    </div>
+  );
+}
+```
+
 ## Utility Functions
 
 The configuration includes helpful utility functions:
