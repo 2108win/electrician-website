@@ -2,7 +2,6 @@
 
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
-import DialogAppointment from "@/components/ui/dialog-appointment";
 import { navigation } from "@/lib/constants";
 import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
@@ -37,7 +36,18 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-            <DialogAppointment className="hidden md:flex" />
+            
+            {/* Desktop Call Button */}
+            <div className="hidden md:flex items-center gap-4">
+              <a
+                href="tel:18007654321"
+                className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <Phone size={20} className="inline mr-2" />
+                GỌI NGAY
+              </a>
+            </div>
+            
             {/* Mobile menu button */}
             <div className="lg:hidden">
               <Button
@@ -68,14 +78,17 @@ export function Header() {
                 </a>
               ))}
               <div className="border-t border-gray-200 pt-4">
-                <p className="mb-2 text-sm text-gray-500">24/7 Emergency</p>
+                <p className="mb-2 text-sm text-gray-500">Khẩn Cấp 24/7</p>
                 <p className="text-primary mb-4 text-lg font-bold">
                   1 (800) 765-4321
                 </p>
-                <Button className="text-primary-foreground w-full bg-red-600 hover:bg-red-700">
-                  <Phone size={16} className="mr-2" />
-                  Call Now
-                </Button>
+                <a
+                  href="tel:18007654321"
+                  className="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg text-center transition-all duration-300"
+                >
+                  <Phone size={16} className="inline mr-2" />
+                  GỌI NGAY
+                </a>
               </div>
             </nav>
           </div>

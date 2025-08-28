@@ -2,46 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Clock, Mail, MapPin, Phone, Send, Zap } from "lucide-react";
-import { useState } from "react";
+import { Clock, MapPin, Phone, Zap } from "lucide-react";
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -49,12 +12,7 @@ export function Contact() {
       details: "1 (800) 765-4321",
       description: "24/7 Emergency Service Available",
     },
-    {
-      icon: Mail,
-      title: "Email Address",
-      details: "info@electricpro.com",
-      description: "We'll respond within 24 hours",
-    },
+    // Removed email contact info to focus on phone calls
     {
       icon: MapPin,
       title: "Our Location",
@@ -75,14 +33,14 @@ export function Contact() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-primary mb-2 text-sm font-semibold tracking-wide uppercase">
-            Contact Us
+            Liên Hệ Ngay
           </h2>
-          <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Get In Touch
-          </h3>
+          <h1 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+            Dịch Vụ Điện Dân Dụng - Thợ Điện Tại Manassas, VA
+          </h1>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            Ready to get started on your electrical project? Contact us today
-            for a free estimate or emergency service.
+            Cần sửa chữa điện khẩn cấp? Gọi ngay thợ điện chuyên nghiệp 24/7! 
+            Dịch vụ điện dân dụng uy tín tại Manassas, Virginia.
           </p>
         </div>
 
@@ -152,131 +110,69 @@ export function Contact() {
             </Card>
           </div>
 
-          {/* Contact Form */}
+          {/* Call Now Section - Replacing Contact Form */}
           <div className="lg:col-span-2">
             <Card className="shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-center text-2xl font-bold text-gray-900">
-                  Request Service or Get a Quote
+              <CardHeader className="text-center">
+                <CardTitle className="text-3xl font-bold text-gray-900">
+                  Cần Dịch Vụ Điện Ngay?
                 </CardTitle>
+                <p className="text-xl text-gray-600 mt-2">
+                  Gọi Ngay - Thợ Điện Chuyên Nghiệp 24/7
+                </p>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Full Name *
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="John Doe"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Email Address *
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="john@example.com"
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Phone Number *
-                      </label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="(555) 123-4567"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="service"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Service Type
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500"
-                      >
-                        <option value="">Select a service</option>
-                        <option value="electrical-repair">
-                          Electrical Repair
-                        </option>
-                        <option value="installation">Installation</option>
-                        <option value="maintenance">Maintenance</option>
-                        <option value="emergency">Emergency Service</option>
-                        <option value="inspection">
-                          Electrical Inspection
-                        </option>
-                        <option value="upgrade">Panel Upgrade</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="mb-2 block text-sm font-medium text-gray-700"
-                    >
-                      Project Details *
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Please describe your electrical needs, including any specific requirements or concerns..."
-                      rows={4}
-                      className="w-full"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="bg-primary hover:bg-primary/80 text-primary-foreground w-full"
+              <CardContent className="text-center space-y-6">
+                <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Dịch Vụ Điện Dân Dụng - Sửa Chữa Điện Tại Manassas, VA
+                  </h3>
+                  <p className="text-lg text-gray-700 mb-6">
+                    ✓ Thợ điện có giấy phép &nbsp;&nbsp; ✓ Dịch vụ khẩn cấp 24/7 &nbsp;&nbsp; ✓ Bảo hành 100%
+                  </p>
+                  
+                  {/* Large Call Now Button */}
+                  <a
+                    href="tel:18007654321"
+                    className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl text-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    <Send size={16} className="mr-2" />
-                    Send Message
-                  </Button>
-                </form>
+                    <Phone size={28} className="inline mr-3" />
+                    GỌI NGAY: 1 (800) 765-4321
+                  </a>
+                  
+                  <div className="mt-4 text-sm text-gray-600">
+                    <p>Nhấn để gọi trực tiếp - Không cần email!</p>
+                  </div>
+                </div>
+                
+                {/* Service Highlights */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <Zap className="text-blue-600 mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-900">Sửa Chữa Điện</h4>
+                    <p className="text-sm text-gray-600">Khắc phục sự cố nhanh chóng</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <Phone className="text-green-600 mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-900">Phản Hồi Nhanh</h4>
+                    <p className="text-sm text-gray-600">Gọi là có ngay</p>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg">
+                    <Clock className="text-purple-600 mx-auto mb-2" size={32} />
+                    <h4 className="font-semibold text-gray-900">24/7 Khẩn Cấp</h4>
+                    <p className="text-sm text-gray-600">Luôn sẵn sàng hỗ trợ</p>
+                  </div>
+                </div>
+                
+                {/* Secondary Call Button */}
+                <div className="pt-4">
+                  <a
+                    href="tel:18007654321"
+                    className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                  >
+                    <Phone size={20} className="inline mr-2" />
+                    Gọi Tư Vấn Miễn Phí
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </div>

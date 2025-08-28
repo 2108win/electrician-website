@@ -7,7 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Mail,
   MapPin,
   Phone,
   Twitter,
@@ -149,26 +148,15 @@ export function Footer() {
                     className="text-primary shrink-0 font-black"
                     size={20}
                   />
-                  <Link
-                    href={`tel:${companyDetails.phone}`}
+                  <a
+                    href="tel:18007654321"
                     className="hover:text-muted-foreground text-secondary font-medium transition-colors duration-200"
                   >
                     {companyDetails.phone}
-                  </Link>
+                  </a>
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <Mail
-                    className="text-primary shrink-0 font-black"
-                    size={20}
-                  />
-                  <Link
-                    href={`mailto:${companyDetails.email}`}
-                    className="hover:text-muted-foreground text-secondary font-medium transition-colors duration-200"
-                  >
-                    {companyDetails.email}
-                  </Link>
-                </div>
+                {/* Removed email contact - focusing on phone calls only */}
 
                 <div className="flex items-start space-x-3">
                   <Clock
@@ -179,6 +167,20 @@ export function Footer() {
                     <p className="">{companyDetails.hours}</p>
                     <p className="text-primary">{companyDetails.mainService}</p>
                   </div>
+                </div>
+                
+                {/* Prominent Footer Call Button */}
+                <div className="mt-4">
+                  <a
+                    href="tel:18007654321"
+                    className="inline-block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Phone size={20} className="inline mr-2" />
+                    GỌI NGAY: {companyDetails.phone}
+                  </a>
+                  <p className="text-xs text-center mt-2 text-secondary">
+                    Thợ điện chuyên nghiệp 24/7 tại Manassas, VA
+                  </p>
                 </div>
               </div>
             </div>

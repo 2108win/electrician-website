@@ -120,15 +120,35 @@ export function Hero() {
         {/* Content with slide-up animation - Use key to force re-render */}
         <div
           key={currentSlide}
-          className="animate-slideUpContent flex flex-col items-center gap-4 text-white select-none"
+          className="animate-slideUpContent flex flex-col items-center gap-6 text-white select-none"
         >
-          <p className="animate-slideUpDelay1 text-lg font-medium lowercase">
+          <p className="animate-slideUpDelay1 text-lg font-medium">
             {currentSlideData.title}
           </p>
 
-          <h2 className="animate-slideUpDelay2 mb-4 max-w-3xl text-center text-4xl leading-tight font-bold md:text-6xl lg:text-7xl">
+          <h1 className="animate-slideUpDelay2 mb-4 max-w-4xl text-center text-4xl leading-tight font-bold md:text-6xl lg:text-7xl">
             {currentSlideData.description}
-          </h2>
+          </h1>
+          
+          <div className="animate-slideUpDelay3 text-center">
+            <p className="text-xl md:text-2xl mb-6 max-w-2xl">
+              Dịch Vụ Điện Dân Dụng - Thợ Điện Chuyên Nghiệp Tại Manassas, VA
+            </p>
+            
+            {/* Large Hero Call Button */}
+            <a
+              href="tel:18007654321"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-5 px-10 rounded-2xl text-xl md:text-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl animate-pulse"
+            >
+              <span className="flex items-center justify-center">
+                📞 GỌI NGAY: 1 (800) 765-4321
+              </span>
+            </a>
+            
+            <p className="text-sm md:text-base mt-4 opacity-90">
+              ⚡ Khẩn Cấp 24/7 | ✅ Thợ Điện Có Giấy Phép | 🔧 Sửa Chữa Điện Nhanh Chóng
+            </p>
+          </div>
         </div>
       </div>
 

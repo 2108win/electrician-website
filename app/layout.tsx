@@ -15,12 +15,16 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     default:
-      "Professional Electrician Services | 24/7 Emergency Electrical Repair",
-    template: "%s | ElectricPro - Licensed Electricians",
+      "Dịch Vụ Điện Dân Dụng - Thợ Điện Chuyên Nghiệp Tại Manassas, VA | 24/7 Khẩn Cấp",
+    template: "%s | ElectricPro - Thợ Điện Có Giấy Phép",
   },
   description:
-    "Professional electrician services for residential, commercial & industrial. Licensed electricians available 24/7 for emergency repairs, installations, panel upgrades & electrical maintenance. Free estimates, 100% satisfaction guaranteed.",
+    "Dịch vụ điện dân dụng chuyên nghiệp tại Manassas, VA. Thợ điện có giấy phép 24/7 khẩn cấp. Sửa chữa điện, lắp đặt điện, nâng cấp tủ điện. Gọi ngay 1 (800) 765-4321!",
   keywords: [
+    "dịch vụ điện dân dụng",
+    "thợ điện",
+    "thợ điện tại Manassas",
+    "sửa chữa điện",
     "electrician",
     "electrical services",
     "emergency electrician",
@@ -41,6 +45,11 @@ export const metadata: Metadata = {
     "generator installation",
     "lighting installation",
     "electrical safety",
+    "Manassas VA electrician",
+    "Virginia electrician",
+    "thợ điện Virginia",
+    "dịch vụ điện khẩn cấp",
+    "sửa chữa điện 24/7",
   ],
   authors: [{ name: "ElectricPro Team" }],
   creator: "ElectricPro",
@@ -58,19 +67,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "vi_VN",
     url: "https://electricpro.com",
-    siteName: "ElectricPro - Professional Electrician Services",
+    siteName: "ElectricPro - Dịch Vụ Điện Dân Dụng Chuyên Nghiệp",
     title:
-      "Professional Electrician Services | 24/7 Emergency Electrical Repair",
+      "Dịch Vụ Điện Dân Dụng - Thợ Điện Chuyên Nghiệp Tại Manassas, VA | 24/7",
     description:
-      "Licensed electricians available 24/7 for emergency repairs, installations, panel upgrades & electrical maintenance. Free estimates, 100% satisfaction guaranteed.",
+      "Thợ điện có giấy phép 24/7 tại Manassas, VA. Dịch vụ điện dân dụng khẩn cấp, sửa chữa điện, lắp đặt điện, nâng cấp tủ điện. Gọi ngay: 1 (800) 765-4321!",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ElectricPro - Professional Electrician Services",
+        alt: "ElectricPro - Dịch Vụ Điện Dân Dụng Chuyên Nghiệp Tại Manassas, VA",
       },
     ],
   },
@@ -79,9 +88,9 @@ export const metadata: Metadata = {
     site: "@electricpro",
     creator: "@electricpro",
     title:
-      "Professional Electrician Services | 24/7 Emergency Electrical Repair",
+      "Dịch Vụ Điện Dân Dụng - Thợ Điện 24/7 Tại Manassas, VA",
     description:
-      "Licensed electricians available 24/7 for emergency repairs, installations, panel upgrades & electrical maintenance. Free estimates, 100% satisfaction guaranteed.",
+      "Thợ điện có giấy phép 24/7 tại Manassas, VA. Dịch vụ điện dân dụng khẩn cấp, sửa chữa điện. Gọi ngay: 1 (800) 765-4321!",
     images: ["/og-image.jpg"],
   },
   verification: {
@@ -112,86 +121,82 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ElectricianBusiness",
-    name: "ElectricPro - Professional Electrical Services",
-    image: "https://electricpro.com/logo.png",
-    description:
-      "Professional electrical services including wiring, electrical repairs, panel upgrades, and emergency electrical work. Licensed and insured electricians serving residential and commercial clients.",
-    address: {
+    "@type": "LocalBusiness",
+    "name": "ElectricPro - Dịch Vụ Điện Dân Dụng Chuyên Nghiệp",
+    "image": "https://electricpro.com/logo.png",
+    "description":
+      "Dịch vụ điện dân dụng chuyên nghiệp tại Manassas, VA. Thợ điện có giấy phép cung cấp dịch vụ sửa chữa điện, lắp đặt điện, nâng cấp tủ điện và khẩn cấp 24/7. Professional electrical services including wiring, repairs, panel upgrades.",
+    "address": {
       "@type": "PostalAddress",
-      streetAddress: "123 Electric Avenue",
-      addressLocality: "Manassas",
-      addressRegion: "VA",
-      postalCode: "20109",
-      addressCountry: "US",
+      "streetAddress": "8494 Signal Hill Road",
+      "addressLocality": "Manassas",
+      "addressRegion": "VA",
+      "postalCode": "20110",
+      "addressCountry": "US",
     },
-    geo: {
+    "geo": {
       "@type": "GeoCoordinates",
-      latitude: "38.7509",
-      longitude: "-77.4753",
+      "latitude": "38.7509",
+      "longitude": "-77.4753",
     },
-    telephone: "+1 (555) 123-4567",
-    email: "contact@electricpro.com",
-    url: "https://electricpro.com",
-    openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-17:00"],
-    serviceArea: {
+    "telephone": "+1 (800) 765-4321",
+    "url": "https://electricpro.com",
+    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-17:00"],
+    "serviceArea": {
       "@type": "Place",
-      name: "Manassas, VA and surrounding areas",
+      "name": "Manassas, VA and surrounding areas",
     },
-    hasOfferCatalog: {
+    "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      name: "Electrical Services",
-      itemListElement: [
+      "name": "Dịch Vụ Điện Dân Dụng",
+      "itemListElement": [
         {
-          "@type": "OfferCatalog",
-          name: "Residential Electrical",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Home Wiring",
-                description:
-                  "Complete home electrical wiring and rewiring services",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Electrical Panel Upgrade",
-                description:
-                  "Electrical panel installation and upgrade services",
-              },
-            },
-          ],
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sửa Chữa Điện Dân Dụng",
+            "description":
+              "Dịch vụ sửa chữa điện chuyên nghiệp cho nhà ở và văn phòng",
+          },
         },
         {
-          "@type": "OfferCatalog",
-          name: "Commercial Electrical",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Commercial Wiring",
-                description:
-                  "Commercial electrical installation and maintenance",
-              },
-            },
-          ],
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lắp Đặt Hệ Thống Điện",
+            "description":
+              "Lắp đặt và nâng cấp hệ thống điện an toàn, đúng tiêu chuẩn",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Dịch Vụ Điện Khẩn Cấp 24/7",
+            "description":
+              "Thợ điện có mặt ngay khi khẩn cấp, phục vụ 24/7",
+          },
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Nâng Cấp Tủ Điện",
+            "description":
+              "Nâng cấp và thay thế tủ điện cũ, đảm bảo an toàn",
+          },
         },
       ],
     },
-    priceRange: "$$",
-    aggregateRating: {
+    "priceRange": "$$",
+    "aggregateRating": {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "127",
-      bestRating: "5",
-      worstRating: "1",
+      "ratingValue": "4.8",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1",
     },
-    sameAs: [
+    "sameAs": [
       "https://facebook.com/electricpro",
       "https://instagram.com/electricpro",
       "https://linkedin.com/company/electricpro",

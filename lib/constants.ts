@@ -168,7 +168,7 @@ export const reviews = {
   reviewList: reviewList,
 };
 export const callToAction = {
-  telephone: "+1 (800) your-number",
+  telephone: "+1 (800) 765-4321",
 };
 
 export const companyDetails = {
@@ -178,7 +178,7 @@ export const companyDetails = {
   state: "VA",
   zip: "20110",
   email: "info@electricpro.com",
-  phone: "+1 (800) your-number",
+  phone: "+1 (800) 765-4321",
   hours: "Mon-Fri 08:00 AM - 05:00 PM",
   description:
     "ElectricPro is a leading electrical contractor specializing in residential, commercial, and industrial projects. We are committed to providing safe, efficient, and cost-effective electrical solutions tailored to our clients' needs.",

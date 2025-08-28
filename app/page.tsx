@@ -1,3 +1,4 @@
+import { Contact } from "@/components/contact";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Gallery } from "@/components/gallery";
@@ -5,6 +6,7 @@ import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import Reviews from "@/components/reviews";
 import { Services } from "@/components/services";
+import { StickyCallButton } from "@/components/sticky-call-button";
 
 export default function HomePage() {
   return (
@@ -16,8 +18,10 @@ export default function HomePage() {
         <Gallery />
         <Reviews />
         <FAQ />
+        <Contact />
       </main>
       <Footer />
+      <StickyCallButton />
     </div>
   );
 }
