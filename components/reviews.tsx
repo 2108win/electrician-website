@@ -60,7 +60,7 @@ function Reviews() {
                         </div>
                         <Image
                           src={data.image}
-                          alt="img"
+                          alt="Khách hàng hài lòng với dịch vụ điện dân dụng tại Manassas VA"
                           width={200}
                           height={200}
                           className="aspect-video size-full rounded-full object-cover"
@@ -102,7 +102,7 @@ function Reviews() {
         <div className="relative z-0 min-h-60 w-full md:min-h-[600px] md:w-2/3">
           <Image
             src="/images/reviews.jpg"
-            alt="Background"
+            alt="Thợ điện chuyên nghiệp - Dịch vụ điện dân dụng uy tín tại Manassas VA"
             fill
             className="h-full w-full object-cover object-center"
           />
@@ -126,7 +126,7 @@ function Reviews() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/cta-bg2.jpg"
-            alt="Background"
+            alt="Dịch vụ điện chuyên nghiệp - Thợ điện có giấy phép tại Manassas VA"
             width={1920}
             height={1080}
             className="size-full object-cover"

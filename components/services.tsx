@@ -9,7 +9,6 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import DialogAppointment from "@/components/ui/dialog-appointment";
 import { callToAction, services } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
@@ -49,7 +48,7 @@ export function Services() {
                     <div className="relative flex size-44 items-center justify-center overflow-hidden rounded-full">
                       <Image
                         src={data.image}
-                        alt="img"
+                        alt={`Dịch vụ điện dân dụng ${data.name} tại Manassas VA - Thợ điện chuyên nghiệp`}
                         fill
                         className="absolute inset-0 object-cover brightness-50 transition-all duration-500 select-none group-hover:brightness-90"
                       />
@@ -89,12 +88,12 @@ export function Services() {
       <div className="to-primary/80 relative w-full bg-gradient-to-r from-blue-900 p-10 md:p-16">
         <div className="bg-background relative z-10 max-w-2xl min-w-1/2 p-10 md:p-16 xl:p-20">
           <h3 className="before:bg-primary relative mb-8 pl-10 text-2xl font-bold before:absolute before:top-1/2 before:left-0 before:h-full before:w-2 before:-translate-y-1/2 before:content-[''] sm:text-4xl md:pl-16 md:text-5xl">
-            Do you <span className="text-primary">Need Help</span> With
-            Electrical Maintenance?
+            Bạn Cần <span className="text-primary">Hỗ Trợ</span> Dịch Vụ 
+            Điện Dân Dụng?
           </h3>
           <p className="text-muted-foreground mb-8 font-sans text-xl">
-            Our electrical repair and service options are proudly offered to
-            clients. Give us a call today to schedule a free service estimate!
+            Chúng tôi cung cấp dịch vụ sửa chữa điện chuyên nghiệp tại Manassas, VA. 
+            Gọi ngay hôm nay để được tư vấn miễn phí!
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
@@ -107,18 +106,26 @@ export function Services() {
               )}
             >
               <Phone size={16} />
-              Give Us a Call
+              Gọi Ngay
             </Link>
-            <DialogAppointment
-              buttonText="Free Estimate"
-              className="bg-secondary-foreground text-secondary"
-            />
+            <Link
+              href={`tel:${tel}`}
+              className={cn(
+                buttonVariants({
+                  size: "xl",
+                }),
+                "bg-red-600 hover:bg-red-700 text-white border-red-600 hover:border-red-700",
+              )}
+            >
+              <Phone size={16} />
+              Tư Vấn Miễn Phí
+            </Link>
           </div>
         </div>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/cta-bg.jpg"
-            alt="Background"
+            alt="Thợ điện chuyên nghiệp làm việc - Dịch vụ điện dân dụng tại Manassas VA"
             width={1920}
             height={1080}
             className="size-full object-cover"

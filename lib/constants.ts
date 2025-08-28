@@ -65,8 +65,8 @@ export const heroSlider = [
 ];
 
 export const services = {
-  title: "24/7 Electrician Services – Safe and Efficient",
-  titleDescription: "We are a Full Service Electrical Contractor",
+  title: "Dịch Vụ Điện 24/7 - An Toàn và Hiệu Quả",
+  titleDescription: "Chúng Tôi Là Nhà Thầu Điện Toàn Diện - We are a Full Service Electrical Contractor",
   items: serviceList,
 };
 

@@ -70,7 +70,7 @@ export function Hero() {
             >
               <Image
                 src={slide.image}
-                alt={slide.title}
+                alt={`${slide.title} - Dịch vụ điện dân dụng chuyên nghiệp tại Manassas VA`}
                 fill
                 className="object-cover"
                 priority={index === 0}

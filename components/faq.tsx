@@ -9,45 +9,44 @@ import { cn } from "@/lib/utils";
 import { HelpCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import DialogAppointment from "./ui/dialog-appointment";
 
 export function FAQ() {
   const tel = callToAction.telephone;
   const faqs = [
     {
-      question: "What types of electrical services do you provide?",
+      question: "Bạn cung cấp những dịch vụ điện nào? / What types of electrical services do you provide?",
       answer:
-        "We provide a comprehensive range of electrical services including residential, commercial, and industrial electrical work. This includes installations, repairs, maintenance, emergency services, panel upgrades, wiring, lighting, and electrical inspections.",
+        "Chúng tôi cung cấp đầy đủ các dịch vụ điện dân dụng bao gồm: sửa chữa điện, lắp đặt điện, nâng cấp tủ điện, kiểm tra điện, và dịch vụ khẩn cấp 24/7. We provide comprehensive electrical services including installations, repairs, maintenance, emergency services, panel upgrades, wiring, lighting, and inspections.",
     },
     {
-      question: "Do you offer 24/7 emergency electrical services?",
+      question: "Có dịch vụ điện khẩn cấp 24/7 không? / Do you offer 24/7 emergency electrical services?",
       answer:
-        "Yes, we provide 24/7 emergency electrical services. Electrical emergencies can happen at any time, and we understand the urgency. Call us at 1 (800) 765-4321 for immediate assistance.",
+        "Có, chúng tôi có dịch vụ điện khẩn cấp 24/7. Sự cố điện có thể xảy ra bất cứ lúc nào. Gọi ngay 1 (800) 765-4321 để được hỗ trợ ngay lập tức. Yes, we provide 24/7 emergency electrical services for immediate assistance.",
     },
     {
-      question: "Are your electricians licensed and insured?",
+      question: "Thợ điện có giấy phép và bảo hiểm không? / Are your electricians licensed and insured?",
       answer:
-        "Absolutely! All of our electricians are fully licensed, bonded, and insured. We maintain all necessary certifications and stay up-to-date with local electrical codes and regulations to ensure safe and compliant work.",
+        "Hoàn toàn có! Tất cả thợ điện của chúng tôi đều có đầy đủ giấy phép, bảo hiểm. Chúng tôi tuân thủ nghiêm ngặt các quy định về an toàn điện. All of our electricians are fully licensed, bonded, and insured with up-to-date certifications.",
     },
     {
-      question: "Do you provide free estimates?",
+      question: "Có tư vấn miễn phí không? / Do you provide free estimates?",
       answer:
-        "Yes, we provide free estimates for all electrical work. Our experienced electricians will assess your needs and provide you with a detailed, no-obligation estimate before any work begins.",
+        "Có, chúng tôi cung cấp tư vấn miễn phí cho tất cả công việc điện. Thợ điện giàu kinh nghiệm sẽ đánh giá nhu cầu và đưa ra báo giá chi tiết, không ràng buộc. Yes, we provide free estimates for all electrical work with detailed, no-obligation quotes.",
     },
     {
-      question: "What areas do you serve?",
+      question: "Phục vụ khu vực nào? / What areas do you serve?",
       answer:
-        "We serve the greater metropolitan area and surrounding communities. Contact us to confirm if we provide services in your specific location. We're always looking to expand our service area to help more customers.",
+        "Chúng tôi phục vụ chính tại Manassas, VA và các khu vực xung quanh. Liên hệ để xác nhận chúng tôi có phục vụ tại địa điểm cụ thể của bạn. We serve Manassas, VA and surrounding communities. Contact us to confirm service in your specific location.",
     },
     {
-      question: "How quickly can you respond to service calls?",
+      question: "Phản hồi nhanh như thế nào? / How quickly can you respond to service calls?",
       answer:
-        "For emergency calls, we typically respond within 1-2 hours. For scheduled appointments, we can usually accommodate same-day or next-day service depending on availability and the scope of work.",
+        "Đối với cuộc gọi khẩn cấp, chúng tôi thường phản hồi trong vòng 1-2 giờ. Đối với lịch hẹn, chúng tôi có thể sắp xếp trong ngày hoặc ngày hôm sau. For emergency calls, we typically respond within 1-2 hours. For scheduled appointments, same-day or next-day service is usually available.",
     },
     {
-      question: "Do you offer warranties on your electrical work?",
+      question: "Có bảo hành công việc điện không? / Do you offer warranties on your electrical work?",
       answer:
-        "Yes, we stand behind our work with comprehensive warranties. All of our electrical work comes with a satisfaction guarantee, and we provide specific warranties on parts and labor depending on the type of service performed.",
+        "Có, chúng tôi cam kết chất lượng với bảo hành toàn diện. Tất cả công việc điện đều có bảo đảm hài lòng và bảo hành cụ thể cho linh kiện và nhân công. Yes, we stand behind our work with comprehensive warranties and satisfaction guarantee on all electrical services.",
     },
     {
       question: "Can you help with electrical code compliance and permits?",
@@ -55,14 +54,14 @@ export function FAQ() {
         "Absolutely! We handle all necessary permits and ensure that all work meets local electrical codes and regulations. We'll take care of the paperwork and inspections required for your project.",
     },
     {
-      question: "What should I do in case of an electrical emergency?",
+      question: "Trường hợp khẩn cấp điện làm gì? / What should I do in case of an electrical emergency?",
       answer:
-        "In case of an electrical emergency, first ensure your safety by turning off power at the main breaker if possible. Do not touch any exposed wires or standing water near electrical sources. Call us immediately at 1 (800) 765-4321 for emergency assistance.",
+        "Trong trường hợp khẩn cấp về điện, trước tiên hãy đảm bảo an toàn bằng cách tắt điện tại cầu dao chính nếu có thể. Không chạm vào dây điện trần hoặc nước đọng gần nguồn điện. Gọi ngay cho chúng tôi 1 (800) 765-4321. In case of electrical emergency, ensure safety by turning off power at main breaker, avoid exposed wires or water near electrical sources, and call us immediately.",
     },
     {
-      question: "Do you offer maintenance plans for electrical systems?",
+      question: "Có gói bảo trì hệ thống điện không? / Do you offer maintenance plans for electrical systems?",
       answer:
-        "Yes, we offer comprehensive maintenance plans for both residential and commercial customers. Regular maintenance helps prevent electrical problems, ensures safety, and can extend the life of your electrical systems.",
+        "Có, chúng tôi cung cấp gói bảo trì toàn diện cho cả khách hàng dân dụng và thương mại. Bảo trì định kỳ giúp ngăn ngừa sự cố điện, đảm bảo an toàn và kéo dài tuổi thọ hệ thống điện. Yes, we offer comprehensive maintenance plans for both residential and commercial customers to prevent problems and ensure safety.",
     },
   ];
 
@@ -75,14 +74,14 @@ export function FAQ() {
             <HelpCircle className="text-primary" size={32} />
           </div>
           <h2 className="text-primary mb-2 text-sm font-semibold tracking-wide uppercase">
-            FAQ
+            Câu Hỏi Thường Gặp
           </h2>
           <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Frequently Asked Questions
+            Câu Hỏi Thường Gặp - Dịch Vụ Điện Dân Dụng
           </h3>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            Get answers to common questions about our electrical services,
-            emergency response, and what to expect when you work with us.
+            Tìm hiểu thêm về dịch vụ điện của chúng tôi, phản hồi khẩn cấp và những gì 
+            bạn có thể mong đợi khi làm việc với thợ điện chuyên nghiệp tại Manassas, VA.
           </p>
         </div>
 
@@ -109,10 +108,10 @@ export function FAQ() {
         {/* Still Have Questions CTA */}
         <div className="mt-12 text-center">
           <div className="bg-primary text-primary-foreground rounded-2xl p-8">
-            <h4 className="mb-4 text-2xl font-bold">Still Have Questions?</h4>
+            <h4 className="mb-4 text-2xl font-bold">Vẫn Có Thắc Mắc?</h4>
             <p className="text-primary-foreground mb-6">
-              Can't find the answer you're looking for? Don't hesitate to
-              contact us directly.
+              Không tìm thấy câu trả lời bạn cần? Đừng ngần ngại gọi trực tiếp cho chúng tôi. 
+              Chúng tôi luôn sẵn sàng hỗ trợ!
             </p>
             <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
@@ -128,10 +127,18 @@ export function FAQ() {
                 <Phone size={16} />
                 {tel}
               </Link>
-              <DialogAppointment
-                buttonText="Send a Message"
-                className="border-secondary"
-              />
+              <Link
+                href={`tel:${tel}`}
+                className={cn(
+                  buttonVariants({
+                    size: "xl",
+                  }),
+                  "bg-red-600 hover:bg-red-700 text-white border-red-600 hover:border-red-700",
+                )}
+              >
+                <Phone size={16} />
+                Gọi Tư Vấn Ngay
+              </Link>
             </div>
           </div>
         </div>

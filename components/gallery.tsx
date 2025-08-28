@@ -52,7 +52,7 @@ export function Gallery() {
           <div className="flex flex-col gap-2">
             <Image
               src={selectedImage!}
-              alt="Selected Project"
+              alt={`${filteredProjects.find((project) => project.image === selectedImage)?.title} - Dự án điện dân dụng tại Manassas VA`}
               width={400}
               height={400}
               className="z-50 h-auto max-h-96 w-fit max-w-96 object-cover"
@@ -110,7 +110,7 @@ export function Gallery() {
             >
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} - Dự án dịch vụ điện dân dụng chuyên nghiệp tại Manassas VA`}
                 layout="fill"
                 className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:brightness-50"
               />
