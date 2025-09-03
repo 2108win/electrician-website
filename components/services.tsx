@@ -2,21 +2,18 @@
 
 import { DotButton, useDotButton } from "@/components/custom/DotsCarousel";
 import SectionHeader from "@/components/section-header";
-import { buttonVariants } from "@/components/ui/button";
 import {
   Carousel,
   CarouselApi,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import DialogAppointment from "@/components/ui/dialog-appointment";
 import { callToAction, services } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
-import { Phone } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef, useState } from "react";
+import { CallButton } from "./CallButton";
 export function Services() {
   const [api, setApi] = useState<CarouselApi>();
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(api);
@@ -89,30 +86,22 @@ export function Services() {
       <div className="to-primary/80 relative w-full bg-gradient-to-r from-blue-900 p-10 md:p-16">
         <div className="bg-background relative z-10 max-w-2xl min-w-1/2 p-10 md:p-16 xl:p-20">
           <h3 className="before:bg-primary relative mb-8 pl-10 text-2xl font-bold before:absolute before:top-1/2 before:left-0 before:h-full before:w-2 before:-translate-y-1/2 before:content-[''] sm:text-4xl md:pl-16 md:text-5xl">
-            Do you <span className="text-primary">Need Help</span> With
-            Electrical Maintenance?
+            Elektrik Bakımı İçin <span className="text-primary">Yardıma</span>{" "}
+            İhtiyacınız Var Mı?
           </h3>
           <p className="text-muted-foreground mb-8 font-sans text-xl">
-            Our electrical repair and service options are proudly offered to
-            clients. Give us a call today to schedule a free service estimate!
+            Elektrik onarım ve servis seçeneklerimizi müşterilerimize gururla
+            sunuyoruz. Ücretsiz servis tahmini planlamak için bugün bizi arayın!
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link
-              href={`tel:${tel}`}
-              className={cn(
-                buttonVariants({
-                  size: "xl",
-                }),
-                "hover:bg-background hover:text-primary hover:border-primary border-1 border-transparent",
-              )}
-            >
-              <Phone size={16} />
-              Give Us a Call
-            </Link>
-            <DialogAppointment
-              buttonText="Free Estimate"
-              className="bg-secondary-foreground text-secondary"
+            <CallButton
+              className="hover:bg-background hover:text-primary hover:border-primary border-1 border-transparent"
+              buttonText={"Bizi Arayın"}
             />
+            {/* <DialogAppointment
+              buttonText="Ücretsiz Tahmin"
+              className="bg-secondary-foreground text-secondary"
+            /> */}
           </div>
         </div>
         <div className="absolute inset-0 z-0">

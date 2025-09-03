@@ -1,46 +1,57 @@
-import { AirVent, Cctv, Cpu, Heater, Lightbulb } from "lucide-react";
+import {
+  AirVent,
+  Cctv,
+  Cpu,
+  Facebook,
+  Heater,
+  Instagram,
+  Lightbulb,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 import { NavType, ServiceType } from "./types";
 
 export const navigation: NavType[] = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "FAQ", href: "#faq" },
-  { name: "Contact", href: "#contact" },
+  { name: "Ana Sayfa", href: "#home" },
+  { name: "Hakkımızda", href: "#about" },
+  { name: "Hizmetler", href: "#services" },
+  { name: "Galeri", href: "#gallery" },
+  { name: "SSS", href: "#faq" },
+  { name: "İletişim", href: "#contact" },
 ];
 
 export const serviceList: ServiceType[] = [
   {
-    name: "Electrical Service",
+    name: "Elektrik Hizmetleri",
     description:
-      "We provide complete electrical design and installation services.",
+      "Tam kapsamlı elektrik tasarımı ve montaj hizmetleri sunuyoruz.",
     icon: Lightbulb,
     image: "/images/cctv.jpg",
   },
   {
-    name: "Heating Service",
+    name: "Isıtma Sistemleri",
     description:
-      "We offer energy efficient electric heat products and installations.",
+      "Enerji verimli elektrikli ısıtma ürünleri ve profesyonel montaj sağlıyoruz.",
     icon: Heater,
     image: "/images/air.jpg",
   },
   {
-    name: "Air Conditioning",
-    description:
-      "Our installation services ensure that you get the right air conditioner.",
+    name: "Klima ve Havalandırma",
+    description: "Doğru klima seçimi ve montajı ile konforlu ortam sağlıyoruz.",
     icon: AirVent,
     image: "/images/air.jpg",
   },
   {
-    name: "Security Systems",
-    description: "You can view events over a monitor in our home.",
+    name: "Güvenlik Sistemleri",
+    description:
+      "Ev ve iş yerleriniz için kamera ve güvenlik çözümleri sunuyoruz.",
     icon: Cctv,
     image: "/images/cctv.jpg",
   },
   {
-    name: "Panels Changes",
-    description: "Electrical panels are the heart of your electrical system.",
+    name: "Pano Değişimleri",
+    description:
+      "Elektrik panoları sisteminizin kalbidir; güvenli ve modern çözümler sağlıyoruz.",
     icon: Cpu,
     image: "/images/air.jpg",
   },
@@ -48,140 +59,214 @@ export const serviceList: ServiceType[] = [
 
 export const heroSlider = [
   {
-    title: "Keeping You Wired",
-    description: "We're the Current Specialist",
+    title: "Her Zaman Güvende",
+    description: "Elektrikte Uzman Çözümler",
     image: "/images/mainslide-01.jpg",
   },
   {
-    title: "Making Our Clients Happier",
-    description: "Best Services for Your Family",
+    title: "Müşteri Memnuniyeti Önceliğimizdir",
+    description: "Aileniz İçin En İyi Hizmetler",
     image: "/images/mainslide-02.jpg",
   },
   {
-    title: "We Can Light Everything",
-    description: "Nothing is Impossible for Us",
+    title: "Hayatınızı Aydınlatıyoruz",
+    description: "Bizim İçin Hiçbir Şey İmkânsız Değil",
     image: "/images/mainslide-03.jpg",
   },
 ];
 
 export const services = {
-  title: "24/7 Electrician Services – Safe and Efficient",
-  titleDescription: "We are a Full Service Electrical Contractor",
+  title: "7/24 Elektrikçi Hizmetleri – Güvenli ve Etkin",
+  titleDescription: "Tam kapsamlı elektrik yüklenici firmasıyız",
   items: serviceList,
 };
 
 export const projects = [
   {
     id: 1,
-    title: "Modern Office Lighting",
-    category: "Offices",
-    image: "/images/mainslide-01.jpg",
+    title: "Modern Ofis Aydınlatması",
+    category: "Ofisler",
+    image: "/images/job-1.jpg",
     description:
-      "Complete electrical installation for a 500-person office building",
+      "500 kişilik bir ofis binası için komple elektrik tesisatı kurulumu",
   },
   {
     id: 2,
-    title: "Residential Rewiring",
-    category: "Residences",
-    image: "/images/mainslide-02.jpg",
-    description: "Full home electrical upgrade with smart home integration",
+    title: "Konut Yeniden Kablolama",
+    category: "Konutlar",
+    image: "/images/job-2.jpg",
+    description: "Akıllı ev entegrasyonu ile tam kapsamlı elektrik yenileme",
   },
   {
     id: 3,
-    title: "Industrial Power Systems",
-    category: "Industrial Objects",
-    image: "/images/mainslide-03.jpg",
-    description: "High-voltage electrical systems for manufacturing facility",
+    title: "Endüstriyel Güç Sistemleri",
+    category: "Sanayi Tesisleri",
+    image: "/images/job-3.jpg",
+    description: "Üretim tesisleri için yüksek voltajlı elektrik sistemleri",
   },
   {
     id: 4,
-    title: "Retail Store Installation",
-    category: "Retail Objects",
-    image: "/images/air.jpg",
-    description: "Custom lighting and electrical setup for retail chain",
+    title: "Mağaza Elektrik Kurulumu",
+    category: "Perakende Alanları",
+    image: "/images/job-4.jpg",
+    description: "Perakende zinciri için özel aydınlatma ve elektrik çözümleri",
   },
   {
     id: 5,
-    title: "Emergency Generator Installation",
-    category: "Residences",
-    image: "/images/cctv.jpg",
-    description: "Backup power solution for residential complex",
+    title: "Acil Jeneratör Montajı",
+    category: "Konutlar",
+    image: "/images/job-5.jpg",
+    description: "Konut kompleksleri için yedek enerji çözümleri",
   },
   {
     id: 6,
-    title: "Data Center Electrical",
-    category: "Industrial Objects",
-    image: "/images/cta-bg.jpg",
-    description: "Critical power infrastructure for data center",
+    title: "Veri Merkezi Elektrik Sistemleri",
+    category: "Sanayi Tesisleri",
+    image: "/images/job-2.jpg",
+    description: "Veri merkezleri için kritik enerji altyapısı kurulumu",
   },
   {
     id: 7,
-    title: "Restaurant Kitchen Setup",
-    category: "Retail Objects",
-    image: "/images/cta-bg.jpg",
-    description: "Commercial kitchen electrical installation",
+    title: "Restoran Mutfak Kurulumu",
+    category: "Perakende Alanları",
+    image: "/images/job-3.jpg",
+    description: "Ticari mutfaklar için profesyonel elektrik montajı",
   },
   {
     id: 8,
-    title: "Smart Home Automation",
-    category: "Residences",
-    image: "/images/cta-bg.jpg",
-    description: "Complete smart home electrical integration",
+    title: "Akıllı Ev Otomasyonu",
+    category: "Konutlar",
+    image: "/images/job-4.jpg",
+    description: "Tam kapsamlı akıllı ev elektrik entegrasyonu",
   },
 ];
 
 export const reviewList = [
   {
-    title: "What Our Clients Say",
-    main: "Professional, Reliable & Cost Effective",
+    title: "Müşteri Yorumlarımız",
+    main: "Hızlı ve Güvenilir Hizmet",
     description:
-      "We've been using your company and from the very beginning found him and his team to be extremely professional and knowledgeable . We wouldn't have any hesitation in recommending their services.",
-    client: "Teresa and Kevin K.",
+      "Gece yarısı elektrik arızası için aradık ve ekip yarım saat içinde geldi. Sorunumuzu hızlıca çözdüler, gerçekten profesyonel bir yaklaşım.",
+    client: "Ahmet Y. - Sultanbeyli",
     image: "/images/review-avatar.jpg",
   },
   {
-    title: "What Our Clients Say",
-    main: "Professional, Reliable & Cost Effective",
+    title: "Müşteri Yorumlarımız",
+    main: "Kaliteli İşçilik",
     description:
-      "We have been using your company for the past 5 years and have always found them to be very professional and reliable. Their team is knowledgeable and always provides excellent service.",
-    client: "John and Sarah D.",
+      "Yeni evimizin tüm elektrik tesisatını BUEM Elektrik yaptı. Hem malzeme kalitesi hem de işçilik çok iyiydi. Hiçbir sorun yaşamadık.",
+    client: "Melis & Onur K. - Pendik",
     image: "/images/review-avatar.jpg",
   },
   {
-    title: "What Our Clients Say",
-    main: "Professional, Reliable & Cost Effective",
+    title: "Müşteri Yorumlarımız",
+    main: "7/24 Destek Harika",
     description:
-      "Your company has been a pleasure to work with. They are always on time, professional, and provide high-quality work. We highly recommend their services to anyone in need of electrical work.",
-    client: "Michael and Lisa S.",
+      "Pazar günü ani bir kesinti yaşadık, aradığımızda hemen dönüş yaptılar. Böyle bir hizmeti her zaman bulmak kolay değil.",
+    client: "Zeynep T. - Kurtköy",
+    image: "/images/review-avatar.jpg",
+  },
+  {
+    title: "Müşteri Yorumlarımız",
+    main: "Müşteri Memnuniyeti Öncelikli",
+    description:
+      "Ofisimiz için aydınlatma sistemleri kuruldu. Ekip her detayı bizimle paylaştı ve isteklerimize göre çözüm üretti. Sonuçtan çok memnun kaldık.",
+    client: "Ali & Seda B. - İstanbul",
     image: "/images/review-avatar.jpg",
   },
 ];
 
 export const reviews = {
-  title: "Our Statistics",
-  titleDescription: "Some Important Facts",
+  title: "İstatistiklerimiz",
+  titleDescription: "Önemli Bazı Rakamlar",
   statistics: [
-    { value: "5000+", label: "Residential Projects" },
-    { value: "1500+", label: "Commercial Projects" },
-    { value: "1000+", label: "Industrial Projects" },
+    { value: "5000+", label: "Konut Projeleri" },
+    { value: "1500+", label: "Ticari Projeler" },
+    { value: "1000+", label: "Sanayi Projeleri" },
   ],
   reviewList: reviewList,
 };
+
 export const callToAction = {
-  telephone: "+1 (800) your-number",
+  telephone: "+90 537 258 56 94",
 };
 
 export const companyDetails = {
-  name: "ElectricPro",
-  address: "8494 Signal Hill Road",
-  city: "Manassas",
-  state: "VA",
-  zip: "20110",
-  email: "info@electricpro.com",
-  phone: "+1 (800) your-number",
-  hours: "Mon-Fri 08:00 AM - 05:00 PM",
+  tag: "@buem.elektrik",
+  name: "BUEM Elektrik",
+  address: "Sultanbeyli Kurtköy Pendik ve tüm İstanbul Anadolu bölgesi",
+  city: "Marmara",
+  state: "İstanbul",
+  zip: "34912",
+  email: "iletisim@buemelektrik.com",
+  phone: "+90 537 258 56 94",
+  hours:
+    "Haftanın tüm günü 07:00 21:00 Ayrıca her iş için de 7/24 aktif destek sağlıyoruz.",
   description:
-    "ElectricPro is a leading electrical contractor specializing in residential, commercial, and industrial projects. We are committed to providing safe, efficient, and cost-effective electrical solutions tailored to our clients' needs.",
-  mainService: "24/7 Emergency Service",
-  copyright: "© 2025 ElectricPro Electrical Services. All Rights Reserved.",
+    "BUEM Elektrik, İstanbul Anadolu bölgesinde güvenilir ve profesyonel elektrik hizmetleri sunmaktadır. Uzman ekibimizle her türlü elektrik ihtiyacınızı karşılamak için buradayız.",
+  mainService: "7/24 Acil Durum Hizmeti",
+  copyright: "© 2025 BUEM Elektrik. Tüm Hakları Saklıdır.",
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24112.74007111762!2d29.305920838522017!3d40.93563968355054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad0a8141c3d7f%3A0x8319872a33a8cd0e!2zS3VybmEsIDM0OTEyIFBlbmRpay9Jc3RhbmJ1bCwgVGjhu5UgTmjEqSBL4buz!5e0!3m2!1svi!2s!4v1756922133824!5m2!1svi!2s",
 };
+
+export const faqs = [
+  {
+    question: "Acil elektrik arızası için ne kadar sürede geliyorsunuz?",
+    answer:
+      "İstanbul Anadolu Yakası’nda acil durum çağrılarınıza genellikle 30–45 dakika içinde ulaşmaktayız. Trafik ve lokasyona göre süre değişiklik gösterebilir.",
+  },
+  {
+    question: "7/24 elektrikçi hizmetiniz gerçekten her gün geçerli mi?",
+    answer:
+      "Evet. Haftanın 7 günü, günün 24 saati acil elektrik arızaları için aktif destek sağlıyoruz. Mesai saatleri dışında da bize ulaşabilirsiniz.",
+  },
+  {
+    question: "Elektrik panosu değişimi ne kadar sürer?",
+    answer:
+      "Pano değişimi yapılacak sistemin büyüklüğüne göre değişmekle birlikte ortalama 2–4 saat arasında tamamlanmaktadır. Tüm işlemler güvenlik standartlarına uygun yapılır.",
+  },
+  {
+    question: "Akıllı ev otomasyonu hizmetiniz hangi sistemleri kapsıyor?",
+    answer:
+      "Aydınlatma, güvenlik kameraları, ısıtma-soğutma sistemleri ve enerji yönetimi dahil olmak üzere tüm akıllı ev sistemlerini entegre ediyoruz.",
+  },
+  {
+    question: "Hangi bölgelerde hizmet veriyorsunuz?",
+    answer:
+      "Sultanbeyli, Kurtköy, Pendik başta olmak üzere tüm İstanbul Anadolu Yakası’nda elektrik arıza, bakım ve montaj hizmetleri sunuyoruz.",
+  },
+  {
+    question: "Hizmetleriniz garantili mi?",
+    answer:
+      "Evet. Yaptığımız tüm işler ve kullandığımız malzemeler garantilidir. Her işlem sonrası müşterilerimize yazılı garanti veriyoruz.",
+  },
+  {
+    question: "Ödeme seçenekleriniz nelerdir?",
+    answer:
+      "Nakit, kredi kartı ve banka havalesi ile ödeme kabul ediyoruz. Kurumsal müşterilerimiz için faturalı hizmet sunmaktayız.",
+  },
+];
+
+export const socialLinks = [
+  {
+    name: "Facebook",
+    href: "#",
+    icon: Facebook,
+  },
+  {
+    name: "Twitter",
+    href: "#",
+    icon: Twitter,
+  },
+  {
+    name: "Instagram",
+    href: "#",
+    icon: Instagram,
+  },
+  {
+    name: "LinkedIn",
+    href: "#",
+    icon: Linkedin,
+  },
+];

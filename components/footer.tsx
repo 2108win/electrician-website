@@ -1,31 +1,10 @@
 import Logo from "@/components/Logo";
 import { Card, CardContent } from "@/components/ui/card";
-import { companyDetails, navigation } from "@/lib/constants";
-import {
-  Check,
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { companyDetails, navigation, socialLinks } from "@/lib/constants";
+import { Check, Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
-  const services = [
-    "Electrical Repairs",
-    "Installation Services",
-    "Emergency Service",
-    "Panel Upgrades",
-    "Wiring & Rewiring",
-    "Lighting Installation",
-    "Electrical Inspection",
-    "Generator Installation",
-  ];
-
   return (
     <footer className="text-primary-foreground bg-foreground">
       {/* Newsletter Section */}
@@ -62,43 +41,29 @@ export function Footer() {
 
               {/* Social Media Links */}
               <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="hover:bg-primary bg-muted-foreground flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
-                >
-                  <Facebook size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="hover:bg-primary bg-muted-foreground flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
-                >
-                  <Twitter size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="hover:bg-primary bg-muted-foreground flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
-                >
-                  <Instagram size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="hover:bg-primary bg-muted-foreground flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
-                >
-                  <Linkedin size={20} />
-                </a>
+                {socialLinks.map(
+                  (social, index) =>
+                    social.href !== "#" && (
+                      <a
+                        key={index}
+                        href={social.href}
+                        className="hover:bg-primary bg-muted-foreground flex h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200"
+                      >
+                        <social.icon size={20} />
+                      </a>
+                    ),
+                )}
               </div>
             </div>
             <p className="text-secondary order-2 leading-relaxed md:order-3 lg:order-2">
-              Our experienced electricians are highly trained in all aspects of
-              electrical service, from office lighting and security systems to
-              emergency repair.
+              {companyDetails.description}
             </p>
             {/* Map Section */}
             <div className="order-3 md:order-2 md:row-span-2 lg:order-3">
               <Card className="overflow-hidden p-0">
                 <CardContent className="h-72 p-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.581756385396!2d-77.45749448779817!3d38.75035887163798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65b93b943fb07%3A0xc8712e829da92b9e!2sHistoric%20District%2C%208494%20Signal%20Hill%20Rd%2C%20Manassas%2C%20VA%2020110%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1753073605401!5m2!1svi!2s"
+                    src={companyDetails.mapEmbedUrl}
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"

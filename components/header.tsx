@@ -2,11 +2,11 @@
 
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
-import DialogAppointment from "@/components/ui/dialog-appointment";
-import { navigation } from "@/lib/constants";
-import { Menu, Phone, X } from "lucide-react";
+import { callToAction, companyDetails, navigation } from "@/lib/constants";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { CallButton } from "./CallButton";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ export function Header() {
           ></div>
         )}
 
-        <div className="z-10 mx-auto max-w-7xl px-4 transition-all duration-500 sm:px-6 lg:px-8">
+        <div className="bg-background z-10 mx-auto max-w-7xl px-4 transition-all duration-500 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 py-4">
             {/* Logo */}
             <Logo className="md:mr-auto lg:mr-0" />
@@ -37,7 +37,8 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-            <DialogAppointment className="hidden md:flex" />
+            {/* <DialogAppointment className="hidden md:flex" /> */}
+            <CallButton className="hidden md:flex" />
             {/* Mobile menu button */}
             <div className="lg:hidden">
               <Button
@@ -68,14 +69,13 @@ export function Header() {
                 </a>
               ))}
               <div className="border-t border-gray-200 pt-4">
-                <p className="mb-2 text-sm text-gray-500">24/7 Emergency</p>
-                <p className="text-primary mb-4 text-lg font-bold">
-                  1 (800) 765-4321
+                <p className="mb-2 text-sm text-gray-500">
+                  {companyDetails.mainService}
                 </p>
-                <Button className="text-primary-foreground w-full bg-red-600 hover:bg-red-700">
-                  <Phone size={16} className="mr-2" />
-                  Call Now
-                </Button>
+                <p className="text-primary mb-4 text-lg font-bold">
+                  {callToAction.telephone}
+                </p>
+                <CallButton className="w-full" />
               </div>
             </nav>
           </div>

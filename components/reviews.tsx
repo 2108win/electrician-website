@@ -7,13 +7,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import DialogAppointment from "@/components/ui/dialog-appointment";
 import { reviews } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import { Quote } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { CallButton } from "./CallButton";
 
 function Reviews() {
   const [api, setApi] = useState<CarouselApi>();
@@ -111,16 +111,16 @@ function Reviews() {
       <div className="to-primary/80 relative flex w-full justify-end bg-gradient-to-r from-blue-900 p-10 md:p-16">
         <div className="bg-background relative z-10 max-w-2xl min-w-1/2 p-10 md:p-16 xl:p-20">
           <h3 className="before:bg-primary relative mb-8 pl-10 text-2xl font-bold before:absolute before:top-1/2 before:left-0 before:h-full before:w-2 before:-translate-y-1/2 before:content-[''] sm:text-4xl md:pl-16 md:text-5xl">
-            Your <span className="text-primary">Best Option</span> in Electrical
-            Contractors 24/7
+            Elektrik Müteahhitlerinde{" "}
+            <span className="text-primary">En İyi Seçeneğiniz</span> 7/24
           </h3>
           <p className="text-muted-foreground mb-8 font-sans text-xl">
-            Our experienced electricians are highly trained in all aspects of
-            electrical service, from office lighting and security systems to
-            emergency repair.
+            Deneyimli elektrikçilerimiz, ofis aydınlatma ve güvenlik
+            sistemlerinden acil onarımlara kadar elektrik hizmetlerinin her
+            alanında yüksek eğitim almışlardır.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <DialogAppointment buttonText="Explore Services" />
+          <div className="flex flex-col items-end justify-end gap-4 sm:flex-row">
+            <CallButton />
           </div>
         </div>
         <div className="absolute inset-0 z-0">

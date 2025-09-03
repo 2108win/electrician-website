@@ -14,7 +14,7 @@ import { Zap } from "lucide-react";
 import { useState } from "react";
 
 function DialogAppointment({
-  buttonText = "Appointment",
+  buttonText = "Call now",
   className,
   iconClassName,
   childClassName,
