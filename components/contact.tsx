@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { companyDetails, services } from "@/lib/constants";
+import { companyDetails, serviceList } from "@/lib/constants";
 import { Clock, Mail, MapPin, Phone, Send, Zap } from "lucide-react";
 import { useState } from "react";
 
@@ -225,7 +225,7 @@ export function Contact() {
                         className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500"
                       >
                         <option value="">Hizmet seçin</option>
-                        {services.map((service, index) => (
+                        {serviceList.map((service, index) => (
                           <option key={index} value={service.name}>
                             {service.name}
                           </option>
