@@ -1,121 +1,205 @@
-# ElectricPro - Professional Electrical Services Website
+# BUEM Elektrik - Professional Electrical Services Website
 
-A modern, SEO-optimized website for electrical services built with Next.js 15, TypeScript, and Tailwind CSS.
+A modern, responsive, and SEO-optimized website for BUEM Elektrik, a professional electrical contractor serving Istanbul's Anatolian side. Built with Next.js 15, TypeScript, and Tailwind CSS for optimal performance and user experience.
 
-## 🚀 Features
+## 🌟 Overview
 
-- **Responsive Design**: Mobile-first approach with smooth animations
-- **SEO Optimized**: Comprehensive meta tags, structured data, and sitemap
-- **Form Validation**: React Hook Form with Zod validation
-- **Performance**: Optimized images, compression, and caching
-- **Analytics Ready**: Google Analytics integration
-- **Accessibility**: WCAG compliant components
+BUEM Elektrik website showcases professional electrical services with a focus on emergency 24/7 availability, residential and commercial electrical solutions, and superior customer service. The site features a clean, modern design optimized for lead generation and mobile responsiveness.
 
-## 📱 Sections
+## ✨ Key Features
 
-1. **Header** - Navigation with emergency contact and mobile-friendly menu
-2. **Hero** - Main landing section with service form and call-to-action
-3. **About Us** - Company introduction with stats and service highlights
-4. **Services** - Detailed service offerings and maintenance plans
-5. **Gallery** - Project showcase with filtering capabilities
-6. **FAQ** - Common questions and answers about electrical services
-7. **Contact** - Contact form, business information, and map integration
-8. **Footer** - Newsletter signup, links, and company information
+- **🎨 Modern Design**: Clean, professional interface with smooth animations
+- **📱 Fully Responsive**: Mobile-first approach ensuring perfect display on all devices
+- **🚀 Performance Optimized**: Fast loading times with Next.js 15 optimizations
+- **🔍 SEO Ready**: Comprehensive meta tags, structured data, and Turkish language support
+- **♿ Accessible**: WCAG compliant components for better accessibility
+- **📊 Analytics Ready**: Google Analytics integration for business insights
+- **🎯 Lead Generation**: Optimized contact forms and call-to-action buttons
 
-## 🛠️ Tech Stack
+## 🏗️ Architecture
 
-- **Framework**: Next.js 15.4.1
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
+### Tech Stack
+
+- **Framework**: Next.js 15.4.1 with App Router
+- **Language**: TypeScript for type safety
+- **Styling**: Tailwind CSS for responsive design
+- **UI Components**: shadcn/ui component library
+- **Icons**: Lucide React icon library
 - **Fonts**: Geist Sans & Geist Mono
+- **Form Handling**: React Hook Form with Zod validation
+- **Carousel**: Embla Carousel for smooth interactions
+
+### Project Structure
+
+```
+├── app/                    # Next.js App Router pages
+├── components/             # Reusable React components
+│   ├── ui/                # shadcn/ui base components
+│   ├── custom/            # Custom component implementations
+│   └── *.tsx              # Page section components
+├── lib/                   # Utility functions and constants
+├── public/                # Static assets (images, icons)
+└── styles/                # Global CSS and configurations
+```
+
+## 🎯 Business Sections
+
+1. **🏠 Hero Section**: Emergency contact and service request form
+2. **ℹ️ About Us**: Company introduction with statistics and expertise
+3. **🔧 Services**: Comprehensive electrical service offerings
+4. **📸 Gallery**: Project portfolio with category filtering
+5. **⭐ Reviews**: Customer testimonials and company statistics
+6. **❓ FAQ**: Common questions about electrical services
+7. **📞 Contact**: Contact form with business information
+8. **📰 Footer**: Newsletter signup and additional resources
 
 ## 🚀 Getting Started
 
-1. **Install dependencies**:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone [repository-url]
+   cd electrician-website
+   ```
+
+2. **Install dependencies**:
 
    ```bash
    npm install
    ```
 
-2. **Run the development server**:
+3. **Set up environment variables**:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Update the `.env` file with your configuration.
+
+4. **Run the development server**:
 
    ```bash
    npm run dev
    ```
 
-3. **Open your browser**:
+5. **Open your browser**:
    Navigate to [http://localhost:3001](http://localhost:3001)
 
 ## 📋 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint code analysis
+npm run type-check   # Run TypeScript type checking
+```
 
 ## 🎨 Customization
 
-The website is highly customizable. You can:
+### Company Information
 
-- Update company information in each component
-- Modify color scheme in Tailwind CSS
-- Add/remove sections as needed
-- Integrate with your preferred form handling service
-- Add Google Maps integration in the Contact section
+Update company details in `/lib/constants.ts`:
 
-## 📞 Contact Information
+- Company name and contact information
+- Service areas and specializations
+- Business hours and emergency contact
+- Social media links
 
-Update the contact information throughout the components:
+### Styling
 
-- Phone: 1 (800) 765-4321
-- Email: info@electricpro.com
-- Address: 8494 Signal Hill Road, Manassas, VA, 20110
-- Hours: Mon-Fri 08:00 AM - 05:00 PM
+- **Colors**: Modify theme colors in `tailwind.config.js`
+- **Components**: Customize component styles in respective files
+- **Typography**: Update font configurations in `app/layout.tsx`
 
-## 🔧 Key Components
+### Content
 
-- **Header**: Responsive navigation with emergency contact
-- **Hero**: Main landing with service request form
-- **AboutUs**: Company stats and service overview
-- **Services**: Service cards and maintenance plans
-- **Gallery**: Project portfolio with category filtering
-- **FAQ**: Expandable question/answer accordion
-- **Contact**: Contact form and business information
-- **Footer**: Newsletter signup and site links
+- **Images**: Replace images in `/public/images/` directory
+- **Copy**: Update text content in component files
+- **Services**: Modify service offerings in constants file
 
-## 📱 Mobile Responsive
+## 🌍 Localization
 
-The website is fully responsive and optimized for:
+The website is primarily in Turkish, serving the Istanbul market:
 
-- Mobile phones (320px+)
-- Tablets (768px+)
-- Desktops (1024px+)
-- Large screens (1280px+)
+- Turkish language content throughout
+- Local business schema markup
+- Istanbul area service coverage
+- Turkish phone number formatting
 
-## ⚡ Performance Features
+## 📊 SEO Features
 
-- Optimized images and loading
-- Smooth scrolling navigation
-- Fast page transitions
-- Minimal bundle size
-- SEO optimization
+- **Structured Data**: LocalBusiness and Electrician schema
+- **Meta Tags**: Comprehensive Open Graph and Twitter Cards
+- **Sitemap**: Auto-generated sitemap for search engines
+- **Performance**: Optimized Core Web Vitals scores
+- **Mobile-First**: Google Mobile-Friendly design
 
-## 🎯 Business Features
+## 🔧 Component Architecture
 
-- Emergency service highlighting
-- 24/7 availability emphasis
-- Professional credentials display
-- Service area coverage
-- Customer testimonial ready
-- Lead generation forms
-- Call-to-action optimization
+### Key Components
 
-## 📝 License
+- **`CallButton`**: Emergency contact functionality
+- **`Gallery`**: Interactive project showcase
+- **`Reviews`**: Customer testimonial carousel
+- **`ContactForm`**: Lead generation form
+- **`SectionHeader`**: Consistent section styling
 
-This project is created for demonstration purposes. Feel free to customize and use for your electrical services business.
+### UI Components
+
+Built on shadcn/ui foundation:
+
+- Buttons, Cards, Carousel
+- Form inputs and validation
+- Modal and Dialog components
+- Navigation and Menu systems
+
+## 📱 Responsive Design
+
+Optimized breakpoints:
+
+- **Mobile**: 320px - 767px
+- **Tablet**: 768px - 1023px
+- **Desktop**: 1024px - 1279px
+- **Large Desktop**: 1280px+
+
+## 🚀 Performance
+
+- **Core Web Vitals** optimized
+- **Image Optimization** with Next.js Image component
+- **Code Splitting** for faster initial loads
+- **Caching Strategy** for static assets
+- **Bundle Analysis** for size optimization
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is proprietary software developed for BUEM Elektrik. All rights reserved.
+
+## 📞 Support
+
+For technical support or business inquiries:
+
+- **Email**: info@buemelektrik.com
+- **Phone**: [Company Phone Number]
+- **Website**: [Company Website]
 
 ---
 
-Built with ❤️ using Next.js and modern web technologies.
+**Built with ❤️ for BUEM Elektrik using modern web technologies**
+
+\*Empowering electrical services through digital

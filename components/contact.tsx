@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { companyDetails, services } from "@/lib/constants";
 import { Clock, Mail, MapPin, Phone, Send, Zap } from "lucide-react";
 import { useState } from "react";
 
@@ -32,7 +33,7 @@ export function Contact() {
     e.preventDefault();
     // Handle form submission here
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
+    alert("Mesajınız için teşekkürler! En kısa sürede size dönüş yapacağız.");
     setFormData({
       name: "",
       email: "",
@@ -45,27 +46,27 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone Number",
-      details: "1 (800) 765-4321",
-      description: "24/7 Emergency Service Available",
+      title: "Telefon Numarası",
+      details: companyDetails.phone,
+      description: "7/24 Acil Servis Mevcut",
     },
     {
       icon: Mail,
-      title: "Email Address",
-      details: "info@electricpro.com",
-      description: "We'll respond within 24 hours",
+      title: "E-posta Adresi",
+      details: companyDetails.email,
+      description: "24 saat içinde yanıtlıyoruz",
     },
     {
       icon: MapPin,
-      title: "Our Location",
-      details: "8494 Signal Hill Road",
-      description: "Manassas, VA, 20110",
+      title: "Konumumuz",
+      details: companyDetails.address,
+      description: `${companyDetails.city}, ${companyDetails.state} ${companyDetails.zip}`,
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      details: "Mon-Fri 08:00 AM - 05:00 PM",
-      description: "Emergency service available 24/7",
+      title: "Çalışma Saatleri",
+      details: companyDetails.hours,
+      description: "Acil servis 7/24 mevcut",
     },
   ];
 
@@ -75,14 +76,14 @@ export function Contact() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-primary mb-2 text-sm font-semibold tracking-wide uppercase">
-            Contact Us
+            İletişim
           </h2>
           <h3 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Get In Touch
+            Bizimle İletişime Geçin
           </h3>
           <p className="mx-auto max-w-3xl text-xl text-gray-600">
-            Ready to get started on your electrical project? Contact us today
-            for a free estimate or emergency service.
+            Elektrik projenize başlamaya hazır mısınız? Ücretsiz keşif veya acil
+            servis için bugün bize ulaşın.
           </p>
         </div>
 
@@ -91,33 +92,22 @@ export function Contact() {
           <div className="space-y-6 lg:col-span-1">
             <div className="bg-primary text-primary-foreground rounded-2xl p-8">
               <div className="mb-6 flex items-center space-x-3">
-                <Zap className="text-primary" size={32} />
+                <Zap className="text-yellow-400" size={32} />
                 <div>
-                  <h4 className="text-xl font-bold">ElectricPro</h4>
-                  <p className="text-primary-foreground">
-                    Professional Electricians
-                  </p>
+                  <h4 className="text-xl font-bold">{companyDetails.name}</h4>
+                  <p className="text-blue-200">Profesyonel Elektrikçiler</p>
                 </div>
               </div>
-              <p className="text-primary-foreground mb-6">
-                Our experienced electricians are highly trained in all aspects
-                of electrical service, from office lighting and security systems
-                to emergency repair.
-              </p>
+              <p className="mb-6 text-blue-100">{companyDetails.description}</p>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-500">
-                      <info.icon
-                        className="text-primary-foreground"
-                        size={20}
-                      />
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-yellow-500">
+                      <info.icon className="text-gray-900" size={20} />
                     </div>
                     <div>
-                      <h5 className="text-primary-foreground font-semibold">
-                        {info.title}
-                      </h5>
-                      <p className="text-primary-foreground font-medium">
+                      <h5 className="font-semibold text-white">{info.title}</h5>
+                      <p className="font-medium text-blue-100">
                         {info.details}
                       </p>
                       <p className="text-sm text-blue-200">
@@ -134,19 +124,19 @@ export function Contact() {
               <CardHeader className="text-center">
                 <CardTitle className="flex items-center justify-center space-x-2 text-red-800">
                   <Phone className="text-red-600" size={24} />
-                  <span>Emergency Service</span>
+                  <span>Acil Servis</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="mb-4 text-red-700">
-                  If this is an emergency outside of normal business hours, call
-                  us immediately
+                  Normal çalışma saatleri dışında acil bir durum varsa, hemen
+                  bizi arayın
                 </p>
                 <a
-                  href="tel:18007654321"
+                  href={`tel:${companyDetails.phone.replace(/\s+/g, "")}`}
                   className="block text-2xl font-bold text-red-600 transition-colors duration-200 hover:text-red-800"
                 >
-                  1 (800) 765-4321
+                  {companyDetails.phone}
                 </a>
               </CardContent>
             </Card>
@@ -157,7 +147,7 @@ export function Contact() {
             <Card className="shadow-xl">
               <CardHeader>
                 <CardTitle className="text-center text-2xl font-bold text-gray-900">
-                  Request Service or Get a Quote
+                  Servis Talep Edin veya Teklif Alın
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -168,7 +158,7 @@ export function Contact() {
                         htmlFor="name"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Full Name *
+                        Ad Soyad *
                       </label>
                       <Input
                         id="name"
@@ -177,7 +167,7 @@ export function Contact() {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="John Doe"
+                        placeholder="Ahmet Yılmaz"
                         className="w-full"
                       />
                     </div>
@@ -186,7 +176,7 @@ export function Contact() {
                         htmlFor="email"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Email Address *
+                        E-posta Adresi *
                       </label>
                       <Input
                         id="email"
@@ -195,7 +185,7 @@ export function Contact() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="john@example.com"
+                        placeholder="ahmet@example.com"
                         className="w-full"
                       />
                     </div>
@@ -207,7 +197,7 @@ export function Contact() {
                         htmlFor="phone"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Phone Number *
+                        Telefon Numarası *
                       </label>
                       <Input
                         id="phone"
@@ -216,7 +206,7 @@ export function Contact() {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="(555) 123-4567"
+                        placeholder="0532 123 45 67"
                         className="w-full"
                       />
                     </div>
@@ -225,7 +215,7 @@ export function Contact() {
                         htmlFor="service"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Service Type
+                        Hizmet Türü
                       </label>
                       <select
                         id="service"
@@ -234,18 +224,14 @@ export function Contact() {
                         onChange={handleInputChange}
                         className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="">Select a service</option>
-                        <option value="electrical-repair">
-                          Electrical Repair
-                        </option>
-                        <option value="installation">Installation</option>
-                        <option value="maintenance">Maintenance</option>
-                        <option value="emergency">Emergency Service</option>
-                        <option value="inspection">
-                          Electrical Inspection
-                        </option>
-                        <option value="upgrade">Panel Upgrade</option>
-                        <option value="other">Other</option>
+                        <option value="">Hizmet seçin</option>
+                        {services.map((service, index) => (
+                          <option key={index} value={service.name}>
+                            {service.name}
+                          </option>
+                        ))}
+                        <option value="acil-servis">Acil Servis</option>
+                        <option value="diger">Diğer</option>
                       </select>
                     </div>
                   </div>
@@ -255,7 +241,7 @@ export function Contact() {
                       htmlFor="message"
                       className="mb-2 block text-sm font-medium text-gray-700"
                     >
-                      Project Details *
+                      Proje Detayları *
                     </label>
                     <Textarea
                       id="message"
@@ -263,7 +249,7 @@ export function Contact() {
                       required
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Please describe your electrical needs, including any specific requirements or concerns..."
+                      placeholder="Lütfen elektrik ihtiyaçlarınızı, özel gereksinimlerinizi veya endişelerinizi açıklayın..."
                       rows={4}
                       className="w-full"
                     />
@@ -274,9 +260,32 @@ export function Contact() {
                     className="bg-primary hover:bg-primary/80 text-primary-foreground w-full"
                   >
                     <Send size={16} className="mr-2" />
-                    Send Message
+                    Mesaj Gönder
                   </Button>
                 </form>
+              </CardContent>
+            </Card>
+
+            {/* Google Maps Integration */}
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="text-center text-xl font-bold text-gray-900">
+                  Konumumuz
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="h-64 w-full overflow-hidden rounded-b-lg">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.665!2d29.1174!3d40.9671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU4JzAxLjciTiAyOcKwMDcnMDIuNyJF!5e0!3m2!1str!2str!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="BUEM Elektrik Konum"
+                  ></iframe>
+                </div>
               </CardContent>
             </Card>
           </div>

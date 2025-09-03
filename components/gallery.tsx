@@ -9,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { projects } from "@/lib/constants";
+import { companyDetails, projects } from "@/lib/constants";
 import { ChevronLeft, ChevronRight, ScanEye } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
@@ -58,7 +58,10 @@ export function Gallery() {
     <section id="gallery">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <SectionHeader title="@electric.pro" titleDescription="Projelerimiz" />
+        <SectionHeader
+          title={companyDetails.tag}
+          titleDescription="Projelerimiz"
+        />
 
         {/* Projects Grid */}
         <div className="mb-12 grid grid-cols-2 gap-4 lg:grid-cols-3">
