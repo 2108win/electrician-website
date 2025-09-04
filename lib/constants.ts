@@ -201,13 +201,13 @@ export const companyDetails = {
   email: "iletisim@buemelektrik.com",
   phone: "+90 537 258 56 94",
   hours:
-    "Haftanın tüm günü 07:00 21:00 Ayrıca her iş için de 7/24 aktif destek sağlıyoruz.",
+    "Haftanın her günü 07:00 – 23:59 saatleri arasında hizmet vermekteyiz. Ayrıca tüm işleriniz için 7/24 aktif destek sağlamaktayız.",
   description:
     "BUEM Elektrik, İstanbul Anadolu bölgesinde güvenilir ve profesyonel elektrik hizmetleri sunmaktadır. Uzman ekibimizle her türlü elektrik ihtiyacınızı karşılamak için buradayız.",
   mainService: "7/24 Acil Durum Hizmeti",
   copyright: "© 2025 BUEM Elektrik. Tüm Hakları Saklıdır.",
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24112.74007111762!2d29.305920838522017!3d40.93563968355054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad0a8141c3d7f%3A0x8319872a33a8cd0e!2zS3VybmEsIDM0OTEyIFBlbmRpay9Jc3RhbmJ1bCwgVGjhu5UgTmjEqSBL4buz!5e0!3m2!1svi!2s!4v1756922133824!5m2!1svi!2s",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39885.55676561088!2d29.25771499959356!3d40.96836062115177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad05ff4c5d567%3A0xb011010aa2dc68c0!2sSultanbeyli%2C%20%C4%B0stanbul!5e1!3m2!1str!2str!4v1756980418627!5m2!1str!2str",
 };
 
 export const faqs = [
